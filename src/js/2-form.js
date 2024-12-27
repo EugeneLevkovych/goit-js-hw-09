@@ -10,7 +10,7 @@ const fillFormField = () => {
     const formDataFromLS = JSON.parse(
       localStorage.getItem('feedback-form-state')
     );
-    if (formData === null) {
+    if (formDataFromLS === null) {
       return;
     }
     formData = formDataFromLS;
