@@ -7,13 +7,14 @@ let formData = {
 
 const fillFormField = () => {
   try {
-    if (localStorage.length === 0) {
-      return;
-    }
     const formDataFromLS = JSON.parse(
       localStorage.getItem('feedback-form-state')
     );
+    if (formData === null) {
+      return;
+    }
     formData = formDataFromLS;
+    // console.log(formData);
 
     for (const key in formDataFromLS) {
       feedbackFormEl.elements[key].value = formDataFromLS[key];
@@ -44,7 +45,6 @@ const onFeedbackFormSubmit = event => {
   }
 
   console.log(formData);
-  formData = { email: '', message: '' }; //-------
   const { currentTarget: formEl } = event;
   formEl.reset();
   localStorage.removeItem('feedback-form-state');
