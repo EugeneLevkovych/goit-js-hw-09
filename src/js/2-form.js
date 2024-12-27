@@ -44,11 +44,11 @@ const onFeedbackFormSubmit = event => {
   }
 
   console.log(formData);
-
+  formData = { email: '', message: '' }; //-------
   const { currentTarget: formEl } = event;
   formEl.reset();
   localStorage.removeItem('feedback-form-state');
 };
 
-feedbackFormEl.addEventListener('input', onFormFieldInput);
+feedbackFormEl.addEventListener('change', onFormFieldInput);
 feedbackFormEl.addEventListener('submit', onFeedbackFormSubmit);

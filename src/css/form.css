@@ -1,0 +1,54 @@
+.feedback-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-2-label {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: start;
+}
+
+.task-2-email-input,
+.task-2-message-input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.task-2-email-input:focus,
+.task-2-message-input:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+.task-2-button {
+  width: 95px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-2-button:hover {
+  background-color: #0056b3;
+}
+
+.task-2-button:active {
+  background-color: #004494;
+}
